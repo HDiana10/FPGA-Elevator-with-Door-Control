@@ -37,11 +37,4 @@ The design follows a modular architecture managed by a `top.sv` module:
 * **Outputs:**
     * `out` [7:0]: LEDs indicating the current floor (One-Hot encoded).
 
-## 💻 Simulation
-The project includes a testbench (`testbench.sv`) that simulates a full usage cycle:
-1. System resets to Floor 0.
-2. Request for Floor 3 is issued.
-3. Request for Floor 7 is issued.
-4. [cite_start]Request for Floor 0 is issued to return down [cite: 26-29].
-
 To simulate realistic timing, ensure the `freq_div` module is set to a low divider (e.g., `count_max = 2`). For physical hardware, set `count_max` to `25000000` for a 2Hz clock.
